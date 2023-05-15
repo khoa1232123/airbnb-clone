@@ -31,14 +31,17 @@ export async function POST(request: Request) {
   const listing = await prisma?.listing.create({
     data: {
       category,
-      location,
       guestCount,
       roomCount,
       bathroomCount,
       imageSrc,
-      price,
       title,
       description,
-    }
-  })
+      locationValue: location.value,
+      price: parseInt(price, 10),
+      userId: currentUser.id,
+    },
+  });
+
+  return NextResponse.json(listing);
 }

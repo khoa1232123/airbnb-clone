@@ -1,3 +1,4 @@
 import getCurrentUser, { getSession } from "./getCurrentUser";
+import getListings from "./getListings";
 
-export { getCurrentUser, getSession };
+export { getCurrentUser, getSession, getListings };
