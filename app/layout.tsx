@@ -4,6 +4,7 @@ import ClientOnly from "./components/ClientOnly";
 import "./globals.css";
 import ToasterProvider from "./providers/ToasterProvider";
 import { getCurrentUser } from "./actions";
+import SearchModal from "./components/modals/SearchModal";
 
 const font = Nunito({ subsets: ["latin"] });
 
@@ -24,6 +25,7 @@ export default async function RootLayout({
         <ClientOnly>
           <ToasterProvider />
           <Navbar currentUser={currentUser} />
+          <SearchModal />
           <RegisterModal />
           <LoginModal />
           <RentModal />

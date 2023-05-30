@@ -248,7 +248,6 @@ const RentModal = (props: Props) => {
           title="Now, set your price"
           subtitle="How much do you charge per night?"
         />
-        loto
         <Input
           id="price"
           label="Price"
